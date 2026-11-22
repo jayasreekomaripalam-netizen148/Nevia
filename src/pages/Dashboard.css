@@ -1,0 +1,290 @@
+
+.dashboard-layout {
+  min-height: 100vh;
+  display: flex;
+  background: #f4f7f9;
+  font-family: Arial, sans-serif;
+  color: #172b3a;
+}
+
+.sidebar {
+  width: 245px;
+  min-height: 100vh;
+  padding: 28px 18px;
+  background: #102d29;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.dashboard-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #4dd5ad;
+  text-decoration: none;
+  font-size: 25px;
+  font-weight: 800;
+  padding: 5px 10px 35px;
+}
+
+.sidebar-label {
+  color: #91aaa2;
+  font-size: 11px;
+  letter-spacing: 2px;
+  padding: 0 10px;
+}
+
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 14px 12px;
+  margin: 4px 0;
+  border-radius: 8px;
+  color: #c4d6d0;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.sidebar-link.active,
+.sidebar-link:hover {
+  background: #087f68;
+  color: white;
+}
+
+.sidebar-logout {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 14px 12px;
+  margin-top: auto;
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.dashboard-main {
+  flex: 1;
+  min-width: 0;
+  padding: 30px;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.dashboard-header h1 {
+  margin-bottom: 8px;
+  font-size: 27px;
+}
+
+.dashboard-header p,
+.shipment-heading p {
+  color: #718096;
+}
+
+.dashboard-user {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: #087f68;
+}
+
+.welcome-banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 35px;
+  background: #e1f4ed;
+  color: #087f68;
+  border-radius: 14px;
+}
+
+.welcome-banner span {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.welcome-banner h2 {
+  margin: 13px 0;
+  color: #173e34;
+  font-size: 28px;
+}
+
+.welcome-banner p {
+  color: #55786e;
+  line-height: 1.6;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin: 28px 0;
+}
+
+.stat-card {
+  padding: 23px;
+  border-radius: 12px;
+  background: white;
+  box-shadow: 0 4px 18px #00000006;
+}
+
+.stat-card svg {
+  color: #087f68;
+}
+
+.stat-card p {
+  margin: 14px 0 8px;
+  color: #718096;
+  font-size: 14px;
+}
+
+.stat-card h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.stat-card small {
+  display: flex;
+  gap: 5px;
+  color: #087f68;
+  font-size: 11px;
+}
+
+.shipment-section {
+  padding: 25px;
+  background: white;
+  border-radius: 12px;
+}
+
+.shipment-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 22px;
+}
+
+.shipment-heading h2 {
+  margin-bottom: 7px;
+}
+
+.shipment-heading button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 7px;
+  background: #087f68;
+  color: white;
+  cursor: pointer;
+}
+
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+th,
+td {
+  padding: 16px 12px;
+  border-bottom: 1px solid #edf0f2;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+th {
+  color: #718096;
+  background: #f8fafb;
+}
+
+.status {
+  padding: 6px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+}
+
+.status.in-transit {
+  background: #e0edff;
+  color: #2563eb;
+}
+
+.status.delivered {
+  background: #d9f7e9;
+  color: #087f68;
+}
+
+.status.pending {
+  background: #fff1d6;
+  color: #b7791f;
+}
+
+.dashboard-footer {
+  padding: 30px 0 5px;
+  text-align: center;
+  color: #718096;
+  font-size: 12px;
+}
+
+@media (max-width: 1000px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .sidebar {
+    width: 70px;
+    padding: 20px 8px;
+  }
+
+  .sidebar-link {
+    justify-content: center;
+    font-size: 0;
+  }
+
+  .sidebar-label,
+  .sidebar-link svg,
+  .sidebar-logout {
+    font-size: 0;
+  }
+
+  .dashboard-logo {
+    font-size: 0;
+    justify-content: center;
+    padding: 5px 0 30px;
+  }
+
+  .dashboard-main {
+    padding: 16px;
+  }
+
+  .dashboard-header {
+    align-items: flex-start;
+  }
+
+  .dashboard-user span {
+    display: none;
+  }
+
+  .welcome-banner {
+    padding: 22px;
+  }
+
+  .welcome-banner h2 {
+    font-size: 22px;
+  }
+}

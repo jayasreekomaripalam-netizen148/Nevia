@@ -1,0 +1,38 @@
+
+> frontend@0.0.0 build
+> tsc -b && vite build
+
+vite v8.3.8 building client environment for production...
+transforming...
+✓ 2142 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.45 kB │ gzip:  0.29 kB
+dist/assets/index-CfWyRIAE.css    8.83 kB │ gzip:  2.64 kB
+dist/assets/index-1xzGaK64.js   277.60 kB │ gzip: 87.54 kB
+
+✗ Build failed in 2.83s
+error during build:
+Build failed with 1 error:
+
+Error: [vite]: Rolldown failed to resolve import ".home.css" from "/home/user/NEVIA/frontend/src/pages/Home.tsx".
+This is most likely unintended because it can break your application at runtime.
+If you do want to externalize this module explicitly add it to
+`build.rolldownOptions.external`
+    at viteLog (file:///home/user/NEVIA/frontend/node_modules/vite/dist/node/chunks/node.js:34880:57)
+    at file:///home/user/NEVIA/frontend/node_modules/vite/dist/node/chunks/node.js:34917:71
+    at onwarn (file:///home/user/NEVIA/frontend/node_modules/@vitejs/plugin-react/dist/index.js:40:7)
+    at file:///home/user/NEVIA/frontend/node_modules/vite/dist/node/chunks/node.js:34917:28
+    at onRollupLog (file:///home/user/NEVIA/frontend/node_modules/vite/dist/node/chunks/node.js:34912:65)
+    at onLog (file:///home/user/NEVIA/frontend/node_modules/vite/dist/node/chunks/node.js:34673:4)
+    at file:///home/user/NEVIA/frontend/node_modules/rolldown/dist/shared/create-bundler-option-BJCYFVUH.mjs:47:26
+    at logger (file:///home/user/NEVIA/frontend/node_modules/rolldown/dist/shared/create-bundler-option-BJCYFVUH.mjs:38:3)
+    at aggregateBindingErrorsIntoJsError (file:///home/user/NEVIA/frontend/node_modules/rolldown/dist/shared/error-CLo6EJKG.mjs:50:18)
+    at unwrapBindingResult (file:///home/user/NEVIA/frontend/node_modules/rolldown/dist/shared/error-CLo6EJKG.mjs:20:128)
+    at #build (file:///home/user/NEVIA/frontend/node_modules/rolldown/dist/shared/rolldown-AohEFLrh.mjs:146:34)
+    at async buildEnvironment (file:///home/user/NEVIA/frontend/node_modules/vite/dist/node/chunks/node.js:34787:66)
+    at async Object.build (file:///home/user/NEVIA/frontend/node_modules/vite/dist/node/chunks/node.js:35208:19)
+    at async Object.buildApp (file:///home/user/NEVIA/frontend/node_modules/vite/dist/node/chunks/node.js:35205:153)
+    at async CAC.<anonymous> (file:///home/user/NEVIA/frontend/node_modules/vite/dist/node/cli.js:789:3) {
+  errors: [Getter/Setter]
+}
