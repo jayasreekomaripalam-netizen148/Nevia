@@ -1,0 +1,12 @@
+touch src/components/Navbar.tsx
+touch src/components/Footer.tsx
+touch src/components/FeatureCard.tsx
+touch src/pages/Home.tsx
+touch src/pages/Login.tsx
+touch src/pages/Register.tsx
+touch src/pages/Dashboard.tsx
+touch src/data/features.ts
+
+O
+Q
+
